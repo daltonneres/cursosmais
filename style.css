@@ -1,0 +1,194 @@
+/* =============================
+   RESET E TIPOGRAFIA
+============================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f3f4f6;
+  color: #111827;
+  line-height: 1.6;
+}
+
+/* =============================
+   HEADER
+============================= */
+.portal-header {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  color: #fff;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.portal-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.portal-header p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.portal-header .btn {
+  padding: 12px 25px;
+  background: #fff;
+  color: #1e3a8a;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .3s ease, color .3s ease;
+}
+
+.portal-header .btn:hover {
+  background: #1e3a8a;
+  color: #fff;
+}
+
+/* =============================
+   LOGIN
+============================= */
+.login-section {
+  max-width: 400px;
+  margin: 0 auto 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  text-align: center;
+}
+
+.login-section h2 {
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+.login-section input {
+  width: 80%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.login-section .btn {
+  padding: 12px 25px;
+  background: #1e3a8a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .3s ease;
+}
+
+.login-section .btn:hover {
+  background: #2563eb;
+}
+
+/* =============================
+   DASHBOARD
+============================= */
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+  padding: 0 20px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,.12);
+}
+
+.card h3 {
+  color: #1e3a8a;
+  margin-bottom: 15px;
+}
+
+/* =============================
+   MODAL
+============================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 95%;
+  max-width: 500px;
+  position: relative;
+  animation: zoom .3s ease;
+  text-align: left;
+}
+
+@keyframes zoom {
+  from { transform: scale(.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #1e3a8a;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.modal-content ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-content p.obs {
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.modal-content a.btn {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+/* =============================
+   FOOTER
+============================= */
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  color: #6b7280;
+  font-size: 0.9rem;
+}

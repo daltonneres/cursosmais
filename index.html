@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cursos D+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header class="portal-header">
+  <h1>🎓 Cursos D+</h1>
+  <p>Ambiente EAD com cursos, trilhas, quizzes e dashboard interativo.</p>
+  <button class="btn" onclick="abrirModal()">ℹ️ Sobre o Portal</button>
+</header>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal()">&times;</span>
+    <h2>🔗 Funcionalidades do Cursos D+</h2>
+    <ul>
+      <li>👨‍🎓 Gestão de alunos e progresso em tempo real</li>
+      <li>📚 Trilhas de aprendizado e cursos EAD</li>
+      <li>📝 Quizzes interativos com pontuação</li>
+      <li>📊 Dashboard com gráficos de desempenho</li>
+      <li>🎓 Certificados emitidos automaticamente</li>
+      <li>⚙️ Painel administrativo completo para controle do portal</li>
+      <li>🌎 Acesso online, responsivo e intuitivo</li>
+    </ul>
+    <p class="obs">💡 Esta é uma demonstração front-end pronta para integração real com backend.</p>
+    <a href="admin.html" class="btn">🖥️ Acessar Admin (Demo)</a>
+  </div>
+</div>
+
+<!-- LOGIN -->
+<section class="login-section">
+  <h2>Login do Aluno</h2>
+  <input type="text" id="nomeAluno" placeholder="Digite seu nome">
+  <button class="btn" onclick="loginAluno()">Entrar</button>
+</section>
+
+<!-- DASHBOARD -->
+<section class="dashboard hidden" id="dashboard">
+  <h2>Bem-vindo, <span id="alunoNome"></span>!</h2>
+
+  <div class="dashboard-grid">
+
+    <div class="card progresso-card">
+      <h3>Progresso do Curso</h3>
+      <canvas id="chartProgresso"></canvas>
+    </div>
+
+    <div class="card boletim-card">
+      <h3>📄 Boletim</h3>
+      <ul id="boletimNotas"></ul>
+    </div>
+
+    <div class="card certificados-card">
+      <h3>🎓 Certificados</h3>
+      <ul id="certificadosLista"></ul>
+    </div>
+
+    <div class="card metodos-card">
+      <h3>📚 Métodos de Estudo</h3>
+      <ul id="metodosLista"></ul>
+    </div>
+
+    <div class="card observacoes-card">
+      <h3>📝 Observações Individuais</h3>
+      <p id="observacoes"></p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Modal
+  function abrirModal() {
+    document.getElementById('modal').style.display = 'flex';
+  }
+  function fecharModal() {
+    document.getElementById('modal').style.display = 'none';
+  }
+</script>
+
+<script src="cursosDplus.js"></script>
+</body>
+</html>
